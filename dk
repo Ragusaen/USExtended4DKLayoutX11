@@ -1,0 +1,174 @@
+// based on a keyboard map from an 'xkb/symbols/dk' file
+
+default  partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    include "latin(type2)"
+
+    name[Group1]="Danish";
+
+    key <AE11>	{ [      plus,   question,    plusminus, questiondown ]	};
+    key <AE12>	{ [dead_acute, dead_grave,          bar,    brokenbar ]	};
+
+
+    key <AC10>	{ [        ae,        AE,   dead_acute, dead_doubleacute ] };
+    key <AC11>	{ [    oslash,  Ooblique, dead_circumflex, dead_caron ]	};
+    key <TLDE>	{ [   onehalf,   section, threequarters,    paragraph ]	};
+
+    key <BKSL>	{ [apostrophe,   asterisk, dead_doubleacute, multiply ]	};
+
+    key <LSGT>	{ [      less,    greater,    backslash,      notsign ]	};
+
+    include "kpdl(comma)"
+
+    include "level3(ralt_switch)"
+};
+
+// Us extended with danish letters symbols for xkb on X.Org Server 7.x
+// 2006-01-01 Shai Coleman, http://colemak.com/
+
+partial alphanumeric_keys
+xkb_symbols "usextendeddk" {
+
+    include "us"
+    name[Group1]= "Danish (US Extended)";
+
+    key <AD07> { [            u,            U, ae, AE ] };
+    key <AD08> { [            i,            I, oslash, Ooblique ] };
+    key <AD09> { [            o,            O, aring, Aring ] };
+    key <AD11> { [            braceleft,            bracketleft ] };
+    key <AD12> { [            braceright,           bracketright ] };
+
+    include "level3(ralt_switch)"
+};
+
+
+// Colemak symbols for xkb on X.Org Server 7.x
+// 2006-01-01 Shai Coleman, http://colemak.com/
+
+partial alphanumeric_keys
+xkb_symbols "colemakcaw" {
+
+    include "us"
+    name[Group1]= "Danish (Colemak CAW)";
+
+    key <TLDE> { [        grave,   asciitilde ] };
+    key <AE01> { [            1,       exclam ] };
+    key <AE02> { [            2,           at ] };
+    key <AE03> { [            3,   numbersign ] };
+    key <AE04> { [            4,       dollar ] };
+    key <AE05> { [            5,      percent ] };
+    key <AE06> { [            6,  asciicircum ] };
+    key <AE07> { [            7,    ampersand ] };
+    key <AE08> { [            8,     asterisk ] };
+    key <AE09> { [            9,    parenleft ] };
+    key <AE10> { [            0,   parenright ] };
+    key <AE11> { [        minus,   underscore ] };
+    key <AE12> { [        equal,         plus ] };
+
+    key <AD01> { [            q,            Q, exclam ] };
+    key <AD02> { [            w,            W, numbersign ] };
+    key <AD03> { [            f,            F, percent ] };
+    key <AD04> { [            p,            P, asciicircum ] };
+    key <AD05> { [            b,            B, ampersand ] };
+    key <AD06> { [    backslash,          bar ] };
+    key <AD07> { [            j,            J ] };
+    key <AD08> { [            l,            L, 7 ] };
+    key <AD09> { [            u,            U, 8] };
+    key <AD10> { [            y,            Y, 9 ] };
+    key <AD11> { [    semicolon,        colon ] };
+    key <AD12> { [        slash,     question ] };
+
+    key <AC01> { [            a,            A, braceleft, bracketleft ] };
+    key <AC02> { [            r,            R, parenleft ] };
+    key <AC03> { [            s,            S, parenright ] };
+    key <AC04> { [            t,            T, braceright, bracketright ] };
+    key <AC05> { [            g,            G ] };
+    key <AC06> { [           ae,           AE ] };
+    key <AC07> { [            k,            K ] };
+    key <AC08> { [            n,            N, 4 ] };
+    key <AC09> { [            e,            E, 5 ] };
+    key <AC10> { [            i,            I, 6 ] };
+    key <AC11> { [            o,            O, 0 ] };
+    key <BKSL> { [   apostrophe,     quotedbl ] };
+    
+
+    key <LSGT> { [            z,            Z, asterisk ] };
+    key <AB01> { [            x,            X, greater ] };
+    key <AB02> { [            c,            C, plus ] };
+    key <AB03> { [            d,            D, minus ] };
+    key <AB04> { [            v,            V, equal ] };
+    key <AB05> { [        aring,        Aring ] };
+    key <AB06> { [       oslash,     Ooblique ] };
+    key <AB07> { [            m,            M ] };
+    key <AB08> { [            h,            H, 1 ] };
+    key <AB09> { [        comma,         less, 2 ] };
+    key <AB10> { [       period,      greater, 3 ] };
+
+    key <SPCE> { [        space,        space,           space,     nobreakspace ] };
+
+    include "level3(ralt_switch)"
+};
+
+partial alphanumeric_keys
+xkb_symbols "nodeadkeys" {
+
+    include "dk(basic)"
+
+    name[Group1]="Danish (no dead keys)";
+
+    key <AE12>	{ [     acute,      grave,          bar,       ogonek ]	};
+    key <AD11>	{ [     aring,      Aring,    diaeresis,       degree ]	};
+    key <AD12>	{ [ diaeresis, asciicircum,  asciitilde,       macron ]	};
+    key <AC10>	{ [        ae,         AE,        acute,  doubleacute ]	};
+    key <AC11>	{ [    oslash,   Ooblique,  asciicircum,        caron ]	};
+    key <BKSL>	{ [apostrophe,   asterisk,  doubleacute,     multiply ]	};
+    key <AB08>	{ [     comma,  semicolon,      cedilla,       ogonek ]	};
+    key <AB09>	{ [    period,      colon, periodcentered,   abovedot ]	};
+
+};
+
+partial alphanumeric_keys
+xkb_symbols "winkeys" {
+
+    include "dk(basic)"
+    name[Group1] = "Danish (Win keys)";
+    include "eurosign(5)"
+};
+
+// Copied from macintosh_vndr/dk
+partial alphanumeric_keys
+xkb_symbols "mac" {
+
+    include "dk"
+    name[Group1]= "Danish (Macintosh)";
+
+    key <SPCE>	{ [    space,       space, nobreakspace, nobreakspace ]	};
+    key <AB10>	{ [    minus,  underscore,       hyphen,       macron ]	};
+    include "kpdl(dot)"
+};
+
+
+partial alphanumeric_keys
+xkb_symbols "mac_nodeadkeys" {
+    include "dk(mac)"
+    name[Group1]= "Danish (Macintosh, no dead keys)";
+
+    key <AE12>	{ [    acute,       grave,          bar,       ogonek ]	};
+    key <AD12>	{ [diaeresis, asciicircum,   asciitilde,  dead_macron ]	};
+};
+
+partial alphanumeric_keys
+xkb_symbols "dvorak" {
+    include "no(dvorak)"
+
+    name[Group1]= "Danish (Dvorak)";
+    key <AD12> { [  asciitilde, asciicircum, dead_diaeresis, dead_tilde ] };
+};
+
+// EXTRAS:
+
+partial alphanumeric_keys
+	xkb_symbols "sun_type6" {
+	include "sun_vndr/dk(sun_type6)"
+};
